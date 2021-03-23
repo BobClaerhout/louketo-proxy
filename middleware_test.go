@@ -372,9 +372,9 @@ func TestOauthRequests(t *testing.T) {
 	newFakeProxy(cfg).RunTests(t, requests)
 }
 
-func TestOauthRequestsWithBaseURI(t *testing.T) {
+func TestOauthRequestsWithExtrenalBaseURI(t *testing.T) {
 	cfg := newFakeKeycloakConfig()
-	cfg.BaseURI = "/base-uri"
+	cfg.ExternalBaseURI = "/base-uri"
 	requests := []fakeRequest{
 		{
 			URI:          "/base-uri/oauth/authorize",

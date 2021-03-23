@@ -178,6 +178,8 @@ type Config struct {
 	OpenIDProviderTimeout time.Duration `json:"openid-provider-timeout" yaml:"openid-provider-timeout" usage:"timeout for openid configuration on .well-known/openid-configuration"`
 	// BaseURI is prepended to all the generated URIs
 	BaseURI string `json:"base-uri" yaml:"base-uri" usage:"common prefix for all URIs" env:"BASE_URI"`
+	// ExternalBaseURI is prepended to all the generated URIs
+	ExternalBaseURI string `json:"external-base-uri" yaml:"external-base-uri" usage:"common prefix for all external URIs" env:"EXTERNAL_BASE_URI"`
 	// OAuthURI is the uri for the oauth endpoints for the proxy
 	OAuthURI string `json:"oauth-uri" yaml:"oauth-uri" usage:"the uri for proxy oauth endpoints" env:"OAUTH_URI"`
 	// Scopes is a list of scope we should request

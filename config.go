@@ -76,8 +76,8 @@ func newDefaultConfig() *Config {
 
 // WithOAuthURI returns the oauth uri
 func (r *Config) WithOAuthURI(uri string) string {
-	if r.BaseURI != "" {
-		return fmt.Sprintf("%s/%s/%s", r.BaseURI, r.OAuthURI, uri)
+	if r.ExternalBaseURI != "" {
+		return fmt.Sprintf("%s/%s/%s", r.ExternalBaseURI, r.OAuthURI, uri)
 	}
 
 	return fmt.Sprintf("%s/%s", r.OAuthURI, uri)
